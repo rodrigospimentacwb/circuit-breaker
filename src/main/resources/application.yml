@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: circuit-breaker
+
+server:
+  port: 8080
+
+okhttp:
+  connectionTimeOut: 300
+  readTimeOut: 600
+  maxIdleConnections: 5
+  keepAliveDuration: 60
+
+stubby4j:
+  baseUrl: http://localhost:8882/api/v1/
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+okhttp:
+    connectionTimeOut: 200
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prd
+
+okhttp:
+    connectionTimeOut: 400

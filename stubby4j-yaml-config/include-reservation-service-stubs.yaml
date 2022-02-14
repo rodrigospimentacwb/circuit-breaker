@@ -1,0 +1,47 @@
+-  request:
+     method: GET
+     url: /api/v1/circuit-breaker
+
+   response:
+     - status: 200
+       headers:
+         content-type: application/json
+       file: json/commons.response.json
+
+     - status: 400
+       headers:
+         content-type: application/json
+       body: >
+         {"code": 400, "message": "Bad request"}
+
+     - status: 403
+       headers:
+         content-type: application/json
+       body: >
+         {"code": 403, "message": "Forbiden"}
+
+     - status: 500
+       headers:
+         content-type: application/json
+       body: >
+         {"code": 500, "message": "Internal Server Error"}
+
+     - status: 200
+       # HttpUtils creates ApacheHttpTransport with read timeout of 1500 milliseconds
+       latency: 1500
+       headers:
+         content-type: application/json
+       body: >
+         {"code": 200, "message": "Latency timeout 1500"}
+
+
+-  request:
+     method: GET
+     url: /api/v1/individual-test/1
+
+   response:
+     status: 200
+     headers:
+       content-type: application/json
+     body: >
+       {"code": 200, "message": "OK"}

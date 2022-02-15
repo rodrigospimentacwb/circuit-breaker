@@ -11,8 +11,23 @@ okhttp:
   maxIdleConnections: 5
   keepAliveDuration: 60
 
+resttemplate:
+  connectionTimeOut: 300
+  readTimeOut: 600
+
 stubby4j:
   baseUrl: http://localhost:8882/api/v1/
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      circuitBreakInstanceTest:
+        slidingWindowSize: 30
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: COUNT_BASED
+        minimumNumberOfCalls: 10
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 60
 
 ---
 spring:

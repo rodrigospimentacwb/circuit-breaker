@@ -1,2 +1,2 @@
 includes:
-  - include-reservation-service-stubs.yaml
+  - service-stubs.yaml

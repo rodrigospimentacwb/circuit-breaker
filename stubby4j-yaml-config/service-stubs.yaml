@@ -1,9 +1,15 @@
 -  request:
      method: GET
-     url: /api/v1/circuit-breaker
+     url: /api/v1/inconsistentURL
 
    response:
+
      - status: 200
+       headers:
+         content-type: application/json
+       file: json/commons.response.json
+
+     - status: 300
        headers:
          content-type: application/json
        file: json/commons.response.json
@@ -13,6 +19,12 @@
          content-type: application/json
        body: >
          {"code": 400, "message": "Bad request"}
+
+     - status: 401
+       headers:
+         content-type: application/json
+       body: >
+         {"code": 401, "message": "Not Authorized"}
 
      - status: 403
        headers:
@@ -37,11 +49,23 @@
 
 -  request:
      method: GET
-     url: /api/v1/individual-test/1
+     url: /api/v1/successUrl
 
    response:
      status: 200
      headers:
        content-type: application/json
      body: >
-       {"code": 200, "message": "OK"}
+       {"code": 200, "message": "success-test"}
+
+-  request:
+     method: GET
+     url: /api/v1/timeout
+
+   response:
+     status: 200
+     latency: 1500
+     headers:
+       content-type: application/json
+     body: >
+       {"code": 200, "message": "success-test"}

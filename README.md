@@ -39,21 +39,21 @@ There is a difference between the two clients restTemplate and OkHttp. In restTe
 
 Thanks to co-worker Marcos Vinícios for his help and teachings and to all my EBANX work team.
 
+* This documentation written in Feb 14, 2022 
+
+
 ### Bibliographic reference:
 
-* [Testing Microservices with Docker and Docker Compose] (Alexander Zagniotov) - feb, 2022.
+[Testing Microservices with Docker and Docker Compose] (Alexander Zagniotov) - feb, 2022.
 
-* [Stubby4j] official documentation (Azagniotov) - feb, 2022.
+[Stubby4j] official documentation (Azagniotov) - feb, 2022.
 
-* [CircuitBreaker] official documentation - feb, 2022.
+[CircuitBreaker] official documentation - feb, 2022.
 
-* [[Resilience4J: Circuit Breaker Implementation on Spring Boot] (Pramuditya Ananta Nur) - feb, 2022.
-
-Written in Feb 14, 2022 
-
+[Resilience4J] Circuit Breaker Implementation on Spring Boot (Pramuditya Ananta Nur) - feb, 2022.
 
 [//]:#
-[Testing Microservices with Docker and Docker Compose]:(https://alexanderzagniotov.medium.com/testing-microservices-in-docker-and-docker-compose-4dd54b02bd1c)
-[Stubby4j]:(https://stubby4j.com)
-[CircuitBreaker]:(https://github.com/gruppopam/stubby4j/blob/master/README.md#endpoint-configuration-howto)
-[Resilience4J: Circuit Breaker Implementation on Spring Boot]:(https://medium.com/bliblidotcom-techblog/resilience4j-circuit-breaker-implementation-on-spring-boot-9f8d195a49e0)
+[Testing Microservices with Docker and Docker Compose]:https://alexanderzagniotov.medium.com/testing-microservices-in-docker-and-docker-compose-4dd54b02bd1c
+[Stubby4j]:https://stubby4j.com
+[CircuitBreaker]:https://github.com/gruppopam/stubby4j/blob/master/README.md#endpoint-configuration-howto
+[Resilience4J]:https://medium.com/bliblidotcom-techblog/resilience4j-circuit-breaker-implementation-on-spring-boot-9f8d195a49e0
